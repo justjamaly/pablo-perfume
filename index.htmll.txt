@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pablo Perfumes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+header h1 {
+  font-size: 3.5em;
+  color: #d4af37;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-size: 1.2em;
+  opacity: 0.85;
+}
+
+.btn-main {
+  background: #d4af37;
+  color: #000;
+  padding: 14px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 25px;
+}
+
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+h2 {
+  color: #d4af37;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: linear-gradient(145deg, #111, #1c1c1c);
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 22px;
+  background: #d4af37;
+  color: #000;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #000;
+}
+.social {
+  color: #d4af37;
+  text-decoration: none;
+  display: block;
+  margin: 8px 0;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Pablo Perfumes</h1>
+  <p>Luxury Scents • Local Sales • Social Media Orders</p>
+  <a class="btn-main" href="https://wa.me/255675999999">Order via WhatsApp</a>
+</header>
+
+<section>
+<h2>Top Best Perfumes</h2>
+<div class="grid">
+
+<div class="card">
+  <img src="images/sauvage.jpg">
+  <h3>Dior Sauvage</h3>
+  <a href="https://wa.me/255675999999">Order Now</a>
+</div>
+
+<div class="card">
+  <img src="images/bleu.jpg">
+  <h3>Bleu de Chanel</h3>
+  <a href="https://wa.me/255675999999">Order Now</a>
+</div>
+
+<div class="card">
+  <img src="images/aventus.jpg">
+  <h3>Creed Aventus</h3>
+  <a href="https://wa.me/255675999999">Order Now</a>
+</div>
+
+<div class="card">
+  <img src="images/eros.jpg">
+  <h3>Versace Eros</h3>
+  <a href="https://wa.me/255675999999">Order Now</a>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Contact Us</h2>
+<a class="social" href="https://wa.me/255675999999">📱 WhatsApp: +255 675 999 999</a>
+<a class="social" href="https://instagram.com/perfumes.pablo">📸 Instagram: perfumes.pablo</a>
+<a class="social">👻 Snapchat: pablo.perfumes</a>
+</section>
+
+<footer>
+© 2026 Pablo Perfumes • Luxury You Can Smell
+</footer>
+
+</body>
+</html>
