@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Pablo Perfumes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 body {
@@ -18,11 +19,8 @@ header {
   padding: 80px 20px;
 }
 
-header h1 {
-  font-size: 3.5em;
-  color: #d4af37;
-  letter-spacing: 2px;
-}
+header <h1 style="font-weight:700;">PABLO<br><span style="font-size:0.4em; letter-spacing:4px;">PERFUMES</span></h1>
+
 
 header p {
   font-size: 1.2em;
@@ -60,13 +58,18 @@ h2 {
 }
 
 .card {
-  background: linear-gradient(145deg, #111, #1c1c1c);
+   background: linear-gradient(145deg, #111, #1c1c1c);
   border-radius: 18px;
   padding: 20px;
   text-align: center;
   box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(212,175,55,0.35);
+}
 .card img {
   width: 100%;
   height: 220px;
@@ -118,7 +121,8 @@ footer {
 <div class="card">
   <img src="images/sauvage.jpg">
   <h3>Dior Sauvage</h3>
-  <a href="https://wa.me/255675999999">Order Now</a>
+  <p style="color:#d4af37; font-weight:bold;">TZS 85,000</p>
+  <a href="https://wa.me/255675999999?text=Hello%20I%20want%20Dior%20Sauvage">Order Now</a>
 </div>
 
 <div class="card">
@@ -136,9 +140,23 @@ footer {
 <div class="card">
   <img src="images/eros.jpg">
   <h3>Versace Eros</h3>
-  <a href="https://wa.me/255675999999">Order Now</a>
+  <a href="https://wa.me/255675999999?text=Hello%20I%20want%20Versace%20Eros">Order Now</a>
+
 </div>
 
+</div>
+<section>
+<h2>Delivery & Location</h2>
+
+<p style="text-align:center; max-width:700px; margin:auto; opacity:0.9;">
+We are based locally and offer fast, reliable delivery.
+Same-day delivery available within the city.
+</p>
+
+<div style="text-align:center; margin-top:30px;">
+<p>📍 Location: <strong>Dar es Salaam</strong></p>
+<p>🚚 Delivery: <strong>Same Day / Next Day</strong></p>
+<p>💳 Payment: <strong>Cash / Mobile Money</strong></p>
 </div>
 </section>
 
