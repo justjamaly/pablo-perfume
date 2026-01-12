@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pablo Perfumes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-main:#f7f7f7;
+  --bg-card:#ffffff;
+  --text-main:#111;
+  --text-muted:#666;
+  --gold:#c9a24d;
+  --border:#e5e5e5;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:var(--bg-main);
+  color:var(--text-main);
+}
+
+/* NAVBAR */
+nav {
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  padding:15px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav strong {
+  letter-spacing:2px;
+}
+
+nav a {
+  text-decoration:none;
+  color:#000;
+  margin-left:20px;
+  font-size:0.9em;
+}
+
+/* HERO */
+header {
+  background:linear-gradient(to right,#000,#222);
+  color:#fff;
+  text-align:center;
+  padding:100px 20px;
+}
+
+header h1 {
+  font-size:3em;
+  letter-spacing:3px;
+}
+
+header span { color:var(--gold); }
+
+header p { opacity:0.85; }
+
+.btn-main {
+  background:var(--gold);
+  color:#000;
+  padding:14px 32px;
+  text-decoration:none;
+  border-radius:4px;
+  font-weight:600;
+  display:inline-block;
+  margin-top:25px;
+}
+
+/* SECTIONS */
+section {
+  max-width:1300px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+h2 {
+  text-align:center;
+  margin-bottom:35px;
+}
+
+/* FILTER BUTTONS */
+.filters {
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.filters button {
+  background:#fff;
+  border:1px solid var(--border);
+  padding:8px 18px;
+  margin:5px;
+  cursor:pointer;
+}
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:30px;
+}
+
+/* CARDS */
+.card {
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:20px;
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+.card img {
+  width:100%;
+  height:220px;
+  object-fit:contain;
+}
+
+.card h3 {
+  font-size:1em;
+  font-weight:500;
+  margin:10px 0 6px;
+}
+
+.price {
+  color:var(--gold);
+  font-weight:600;
+}
+
+.card a {
+  background:#000;
+  color:#fff;
+  padding:10px 20px;
+  border-radius:4px;
+  text-decoration:none;
+  font-size:0.85em;
+  display:inline-block;
+  margin-top:10px;
+}
+
+/* INFO */
+.info {
+  max-width:750px;
+  margin:auto;
+  text-align:center;
+  color:var(--text-muted);
+}
+
+/* FOOTER */
+footer {
+  background:#111;
+  color:#bbb;
+  text-align:center;
+  padding:35px 20px;
+  font-size:0.85em;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  header h1 { font-size:2.3em; }
+  nav a { margin-left:10px; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <strong>PABLO PERFUMES</strong>
+  <div>
+    <a href="#shop">Shop</a>
+    <a href="#delivery">Delivery</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <h1>PABLO <span>PERFUMES</span></h1>
+  <p>Authentic Designer Fragrances • Delivered Across Dar es Salaam</p>
+  <a class="btn-main" href="https://wa.me/255675999999">Order via WhatsApp</a>
+</header>
+
+<section id="shop">
+  <h2>Our Bestselling Fragrances</h2>
+
+  <div class="filters">
+    <button>Men</button>
+    <button>Women</button>
+    <button>Unisex</button>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="images/sauvage.jpg">
+      <h3>Dior Sauvage</h3>
+      <p class="price">TZS 85,000</p>
+      <a href="https://wa.me/255675999999?text=I%20want%20Dior%20Sauvage">Order</a>
+    </div>
+
+    <div class="card">
+      <img src="images/bleu.jpg">
+      <h3>Bleu de Chanel</h3>
+      <p class="price">TZS 90,000</p>
+      <a href="https://wa.me/255675999999?text=I%20want%20Bleu%20de%20Chanel">Order</a>
+    </div>
+
+    <div class="card">
+      <img src="images/aventus.jpg">
+      <h3>Creed Aventus</h3>
+      <p class="price">TZS 150,000</p>
+      <a href="https://wa.me/255675999999?text=I%20want%20Creed%20Aventus">Order</a>
+    </div>
+
+    <div class="card">
+      <img src="images/eros.jpg">
+      <h3>Versace Eros</h3>
+      <p class="price">TZS 75,000</p>
+      <a href="https://wa.me/255675999999?text=I%20want%20Versace%20Eros">Order</a>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Why Choose Pablo Perfumes</h2>
+  <div class="grid">
+    <div class="card"><h3>✔ Authentic</h3><p>100% genuine fragrances</p></div>
+    <div class="card"><h3>🚚 Fast Delivery</h3><p>Same-day in Dar es Salaam</p></div>
+    <div class="card"><h3>💬 Easy Orders</h3><p>WhatsApp & Instagram</p></div>
+  </div>
+</section>
+
+<section id="delivery">
+  <h2>Delivery & Location</h2>
+  <p class="info">
+    We deliver safely across Dar es Salaam with same-day and next-day options.
+    Cash and mobile money accepted.
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p class="info">
+    📱 WhatsApp: +255 675 999 999<br>
+    📸 Instagram: perfumes.pablo<br>
+    📍 Dar es Salaam
+  </p>
+</section>
+
+<footer>
+  © 2026 Pablo Perfumes • Luxury You Can Smell
+</footer>
+
+</body>
+</html>
