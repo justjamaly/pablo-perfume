@@ -9,210 +9,307 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-:root{
---bg:#f6f6f6;--card:#fff;--text:#111;--muted:#666;
---gold:#c9a24d;--border:#e5e5e5;
-}
-*{box-sizing:border-box}
-body{margin:0;font-family:Poppins;background:var(--bg);color:var(--text)}
-
-nav{
-background:#fff;border-bottom:1px solid var(--border);
-padding:15px 25px;display:flex;justify-content:space-between;align-items:center;
-position:sticky;top:0;z-index:100
-}
-nav strong{letter-spacing:2px}
-nav a{text-decoration:none;color:#000;margin-left:20px;font-size:.9em}
-
-header{
-background:linear-gradient(to right,#000,#1c1c1c);
-color:#fff;text-align:center;padding:110px 20px
-}
-header h1{font-size:3em;letter-spacing:4px}
-header span{color:var(--gold)}
-header p{opacity:.85;max-width:600px;margin:auto}
-
-.btn{
-background:var(--gold);color:#000;padding:14px 34px;
-border-radius:4px;text-decoration:none;font-weight:600;display:inline-block;margin-top:30px
+:root {
+  --bg: #f6f6f6;
+  --card: #fff;
+  --text: #111;
+  --muted: #666;
+  --gold: #c9a24d;
+  --border: #e5e5e5;
 }
 
-section{max-width:1300px;margin:auto;padding:70px 20px}
-h2{text-align:center;margin-bottom:30px}
-
-.controls{text-align:center;margin-bottom:35px}
-.controls input,.controls select{
-padding:10px;width:220px;border:1px solid var(--border);margin:6px
-}
-.controls button{
-padding:8px 16px;border:1px solid var(--border);background:#fff;cursor:pointer;margin:4px
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text);
 }
 
-.grid{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px
+nav {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.card{
-background:var(--card);border:1px solid var(--border);border-radius:10px;
-padding:20px;text-align:center;transition:.3s
+nav strong { letter-spacing: 2px; }
+nav a {
+  text-decoration: none;
+  color: #000;
+  margin-left: 20px;
+  font-size: .9em;
+  transition: color 0.3s;
 }
-.card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,.12)}
-.card img{width:100%;height:220px;object-fit:contain}
-.card h3{font-size:1em;font-weight:500;margin:12px 0 5px}
-.price{color:var(--gold);font-weight:600}
+nav a:hover { color: var(--gold); }
 
-.card button{
-background:#000;color:#fff;padding:10px 18px;border-radius:4px;
-border:none;font-size:.85em;margin:6px;cursor:pointer
+header {
+  background: linear-gradient(to right,#000,#1c1c1c);
+  color: #fff;
+  text-align: center;
+  padding: 110px 20px;
+}
+header h1 { font-size: 3em; letter-spacing: 4px; margin: 0; }
+header span { color: var(--gold); }
+header p { opacity: .85; max-width: 600px; margin: 10px auto 0; }
+
+.btn {
+  background: var(--gold);
+  color: #000;
+  padding: 14px 34px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 30px;
+  transition: background 0.3s;
+}
+.btn:hover { background: #b48b3f; }
+
+main { max-width: 1300px; margin: auto; padding: 70px 20px; }
+
+h2 { text-align: center; margin-bottom: 30px; }
+
+.controls {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.controls input,
+.controls select {
+  padding: 10px;
+  width: 220px;
+  border: 1px solid var(--border);
+  margin: 6px;
+  border-radius: 4px;
+}
+.controls button {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+  margin: 4px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.controls button:hover { background: var(--gold); color: #000; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+  gap: 30px;
 }
 
-footer{
-background:#111;color:#bbb;text-align:center;padding:35px 20px;font-size:.85em
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform .3s, box-shadow .3s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.card h3 { font-size: 1em; font-weight: 500; margin: 12px 0 5px; }
+.price { color: var(--gold); font-weight: 600; }
+.card button {
+  background: #000;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 4px;
+  border: none;
+  font-size: .85em;
+  margin: 6px;
+  cursor: pointer;
+  transition: background .3s;
+}
+.card button:hover { background: var(--gold); color: #000; }
+
+footer {
+  background: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 35px 20px;
+  font-size: .85em;
 }
 
-#cartBtn{
-position:fixed;bottom:20px;right:20px;
-background:#000;color:#fff;padding:14px 20px;border-radius:50px;
-cursor:pointer;font-size:.9em
+#cartBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #000;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: .9em;
+  transition: background .3s;
 }
+#cartBtn:hover { background: var(--gold); color: #000; }
 
 @media(max-width:600px){
-header h1{font-size:2.2em}
-nav a{margin-left:10px}
+  header h1 { font-size: 2.2em; }
+  nav a { margin-left: 10px; }
 }
 </style>
 </head>
 
 <body>
-
 <nav>
-<strong>PABLO PERFUMES</strong>
-<div>
-<a href="#shop">Shop</a>
-<a href="#delivery">Delivery</a>
-<a href="#contact">Contact</a>
-</div>
+  <strong>PABLO PERFUMES</strong>
+  <div>
+    <a href="#shop">Shop</a>
+    <a href="#delivery">Delivery</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 <header>
-<h1>PABLO <span>PERFUMES</span></h1>
-<p>Authentic Designer Fragrances • Same-Day Delivery in Dar es Salaam</p>
-<a class="btn" href="#shop">Shop Now</a>
+  <h1>PABLO <span>PERFUMES</span></h1>
+  <p>Authentic Designer Fragrances • Same-Day Delivery in Dar es Salaam</p>
+  <a class="btn" href="#shop">Shop Now</a>
 </header>
 
+<main>
 <section id="shop">
-<h2>Shop Fragrances</h2>
+  <h2>Shop Fragrances</h2>
 
-<div class="controls">
-<input type="text" id="search" placeholder="Search perfume...">
-<select id="sort">
-<option value="default">Sort by price</option>
-<option value="low">Low to High</option>
-<option value="high">High to Low</option>
-</select><br>
-<button onclick="setCategory('all')">All</button>
-<button onclick="setCategory('men')">Men</button>
-<button onclick="setCategory('women')">Women</button>
-<button onclick="setCategory('unisex')">Unisex</button>
-</div>
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search perfume...">
+    <select id="sort">
+      <option value="default">Sort by price</option>
+      <option value="low">Low to High</option>
+      <option value="high">High to Low</option>
+    </select><br>
+    <button data-category="all">All</button>
+    <button data-category="men">Men</button>
+    <button data-category="women">Women</button>
+    <button data-category="unisex">Unisex</button>
+  </div>
 
-<div class="grid" id="products">
+  <div class="grid" id="products">
+    <div class="card men" data-name="Dior Sauvage" data-price="85000">
+      <img src="images/sauvage.jpg" alt="Dior Sauvage" loading="lazy">
+      <h3>Dior Sauvage</h3>
+      <p class="price">TZS 85,000</p>
+      <button class="add-btn">Add to Cart</button>
+    </div>
 
-<div class="card men" data-name="Dior Sauvage" data-price="85000">
-<img src="images/sauvage.jpg" loading="lazy">
-<h3>Dior Sauvage</h3>
-<p class="price">TZS 85,000</p>
-<button onclick="addToCart('Dior Sauvage',85000)">Add to Cart</button>
-</div>
+    <div class="card men" data-name="Bleu de Chanel" data-price="90000">
+      <img src="images/bleu.jpg" alt="Bleu de Chanel" loading="lazy">
+      <h3>Bleu de Chanel</h3>
+      <p class="price">TZS 90,000</p>
+      <button class="add-btn">Add to Cart</button>
+    </div>
 
-<div class="card men" data-name="Bleu de Chanel" data-price="90000">
-<img src="images/bleu.jpg" loading="lazy">
-<h3>Bleu de Chanel</h3>
-<p class="price">TZS 90,000</p>
-<button onclick="addToCart('Bleu de Chanel',90000)">Add to Cart</button>
-</div>
-
-<div class="card unisex" data-name="Oud Wood" data-price="120000">
-<img src="images/oudwood.jpg" loading="lazy">
-<h3>Oud Wood</h3>
-<p class="price">TZS 120,000</p>
-<button onclick="addToCart('Oud Wood',120000)">Add to Cart</button>
-</div>
-
-</div>
+    <div class="card unisex" data-name="Oud Wood" data-price="120000">
+      <img src="images/oudwood.jpg" alt="Oud Wood" loading="lazy">
+      <h3>Oud Wood</h3>
+      <p class="price">TZS 120,000</p>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+  </div>
 </section>
 
 <section id="delivery">
-<h2>Delivery & Payment</h2>
-<p style="text-align:center;color:#666">
-Same-day delivery in Dar es Salaam<br>
-Cash & Mobile Money accepted
-</p>
+  <h2>Delivery & Payment</h2>
+  <p style="text-align:center;color:#666">
+    Same-day delivery in Dar es Salaam<br>
+    Cash & Mobile Money accepted
+  </p>
 </section>
 
 <section id="contact">
-<h2>Contact Us</h2>
-<p style="text-align:center;color:#666">
-📱 WhatsApp: +255 675 999 999<br>
-📸 Instagram: perfumes.pablo
-</p>
+  <h2>Contact Us</h2>
+  <p style="text-align:center;color:#666">
+    📱 WhatsApp: +255 675 999 999<br>
+    📸 Instagram: perfumes.pablo
+  </p>
 </section>
+</main>
 
 <footer>
-© 2026 Pablo Perfumes • Luxury You Can Smell
+  © 2026 Pablo Perfumes • Luxury You Can Smell
 </footer>
 
-<div id="cartBtn" onclick="checkout()">🛒 Checkout</div>
+<div id="cartBtn">🛒 Checkout</div>
 
 <script>
-let category='all';
-let cart=[];
+const searchInput = document.getElementById('search');
+const sortSelect = document.getElementById('sort');
+const categoryButtons = document.querySelectorAll('.controls button[data-category]');
+const productsGrid = document.getElementById('products');
+const cartBtn = document.getElementById('cartBtn');
 
-function setCategory(c){
-category=c;filterProducts();
-}
+let category = 'all';
+let cart = [];
 
-document.getElementById('search').onkeyup=filterProducts;
-document.getElementById('sort').onchange=sortProducts;
+// Filter products
+const filterProducts = () => {
+  const query = searchInput.value.toLowerCase();
+  [...productsGrid.children].forEach(card => {
+    const matchesSearch = card.dataset.name.toLowerCase().includes(query);
+    const matchesCategory = category === 'all' || card.classList.contains(category);
+    card.style.display = (matchesSearch && matchesCategory) ? 'block' : 'none';
+  });
+};
 
-function filterProducts(){
-let q=search.value.toLowerCase();
-document.querySelectorAll('.card').forEach(c=>{
-let match=c.dataset.name.toLowerCase().includes(q);
-let cat=category==='all'||c.classList.contains(category);
-c.style.display=(match&&cat)?'block':'none';
+// Sort products
+const sortProducts = () => {
+  const mode = sortSelect.value;
+  const cards = [...productsGrid.children];
+  if(mode !== 'default') {
+    cards.sort((a, b) => mode === 'low' 
+      ? a.dataset.price - b.dataset.price 
+      : b.dataset.price - a.dataset.price);
+    cards.forEach(c => productsGrid.appendChild(c));
+  }
+};
+
+// Set category
+categoryButtons.forEach(btn => btn.addEventListener('click', () => {
+  category = btn.dataset.category;
+  filterProducts();
+}));
+
+// Add to cart using event delegation
+productsGrid.addEventListener('click', e => {
+  if(e.target.classList.contains('add-btn')) {
+    const card = e.target.closest('.card');
+    const name = card.dataset.name;
+    const price = parseInt(card.dataset.price);
+    cart.push({name, price});
+    alert(`${name} added to cart`);
+  }
 });
-}
 
-function sortProducts(){
-let grid=document.getElementById('products');
-let cards=[...grid.children];
-let mode=sort.value;
-
-if(mode!=='default'){
-cards.sort((a,b)=>{
-return mode==='low'
-?a.dataset.price-b.dataset.price
-:b.dataset.price-a.dataset.price;
+// Checkout
+cartBtn.addEventListener('click', () => {
+  if(!cart.length) { alert("Cart is empty"); return; }
+  let msg = "Hello Pablo Perfumes,%0A%0AI want to order:%0A";
+  let total = 0;
+  cart.forEach(item => { 
+    msg += `- ${item.name} (TZS ${item.price})%0A`; 
+    total += item.price;
+  });
+  msg += `%0ATotal: TZS ${total}`;
+  window.open(`https://wa.me/255675999999?text=${msg}`, "_blank");
 });
-cards.forEach(c=>grid.appendChild(c));
-}
-}
 
-function addToCart(name,price){
-cart.push({name,price});
-alert(name+" added to cart");
-}
-
-function checkout(){
-if(!cart.length){alert("Cart is empty");return;}
-let msg="Hello Pablo Perfumes,%0A%0AI want to order:%0A";
-let total=0;
-cart.forEach(i=>{msg+=`- ${i.name} (TZS ${i.price})%0A`;total+=i.price});
-msg+=`%0ATotal: TZS ${total}`;
-window.open("https://wa.me/255675999999?text="+msg,"_blank");
-}
+searchInput.addEventListener('input', filterProducts);
+sortSelect.addEventListener('change', sortProducts);
 </script>
-
 </body>
 </html>
