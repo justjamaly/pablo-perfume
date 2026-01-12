@@ -4,63 +4,65 @@
 <meta charset="UTF-8">
 <title>Pablo Perfumes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 body {
   margin: 0;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: radial-gradient(circle at top, #1a1a1a, #000);
   color: #fff;
 }
 
 header {
   text-align: center;
-  padding: 80px 20px;
+  padding: 90px 20px;
 }
 
-header <h1 style="font-weight:700;">PABLO<br><span style="font-size:0.4em; letter-spacing:4px;">PERFUMES</span></h1>
-
+header h1 {
+  font-size: 3.8em;
+  color: #d4af37;
+  letter-spacing: 2px;
+}
 
 header p {
-  font-size: 1.2em;
   opacity: 0.85;
 }
 
 .btn-main {
   background: #d4af37;
   color: #000;
-  padding: 14px 35px;
+  padding: 15px 38px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+  margin-top: 30px;
   display: inline-block;
-  margin-top: 25px;
 }
 
 section {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 70px 20px;
 }
 
 h2 {
-  color: #d4af37;
   text-align: center;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
+  color: #d4af37;
+  margin-bottom: 50px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 30px;
 }
 
 .card {
-   background: linear-gradient(145deg, #111, #1c1c1c);
-  border-radius: 18px;
-  padding: 20px;
+  background: linear-gradient(145deg, #111, #1c1c1c);
+  border-radius: 20px;
+  padding: 22px;
   text-align: center;
   box-shadow: 0 10px 25px rgba(0,0,0,0.7);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -70,33 +72,36 @@ h2 {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 20px 40px rgba(212,175,55,0.35);
 }
+
 .card img {
   width: 100%;
   height: 220px;
   object-fit: contain;
 }
 
-.card h3 {
-  margin: 15px 0 10px;
+.price {
+  color: #d4af37;
+  font-weight: bold;
 }
 
 .card a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 22px;
   background: #d4af37;
   color: #000;
-  text-decoration: none;
+  padding: 10px 24px;
   border-radius: 20px;
+  text-decoration: none;
   font-weight: bold;
   font-size: 0.9em;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 footer {
+  background: #000;
   text-align: center;
   padding: 40px 20px;
-  background: #000;
 }
+
 .social {
   color: #d4af37;
   text-decoration: none;
@@ -109,54 +114,40 @@ footer {
 <body>
 
 <header>
-  <h1>Pablo Perfumes</h1>
-  <p>Luxury Scents • Local Sales • Social Media Orders</p>
-  <a class="btn-main" href="https://wa.me/255675999999">Order via WhatsApp</a>
+<h1>PABLO<br><span style="font-size:0.4em;letter-spacing:4px;">PERFUMES</span></h1>
+<p>Luxury Scents • Local Sales • Social Media Orders</p>
+<a class="btn-main" href="https://wa.me/255675999999">Order via WhatsApp</a>
 </header>
 
 <section>
-<h2>Top Best Perfumes</h2>
+<h2>Top 20 Best Perfumes</h2>
 <div class="grid">
 
-<div class="card">
-  <img src="images/sauvage.jpg">
-  <h3>Dior Sauvage</h3>
-  <p style="color:#d4af37; font-weight:bold;">TZS 85,000</p>
-  <a href="https://wa.me/255675999999?text=Hello%20I%20want%20Dior%20Sauvage">Order Now</a>
-</div>
+<div class="card"><img src="images/sauvage.jpg"><h3>Dior Sauvage</h3><p class="price">TZS 85,000</p><a href="https://wa.me/255675999999?text=Hello%20I%20want%20Dior%20Sauvage">Order Now</a></div>
+<div class="card"><img src="images/bleu.jpg"><h3>Bleu de Chanel</h3><p class="price">TZS 90,000</p><a href="https://wa.me/255675999999?text=Hello%20I%20want%20Bleu%20de%20Chanel">Order Now</a></div>
+<div class="card"><img src="images/aventus.jpg"><h3>Creed Aventus</h3><p class="price">TZS 150,000</p><a href="https://wa.me/255675999999?text=Hello%20I%20want%20Creed%20Aventus">Order Now</a></div>
+<div class="card"><img src="images/ysl-y.jpg"><h3>YSL Y</h3><p class="price">TZS 80,000</p><a href="https://wa.me/255675999999?text=Hello%20I%20want%20YSL%20Y">Order Now</a></div>
+<div class="card"><img src="images/eros.jpg"><h3>Versace Eros</h3><p class="price">TZS 75,000</p><a href="https://wa.me/255675999999?text=Hello%20I%20want%20Versace%20Eros">Order Now</a></div>
 
-<div class="card">
-  <img src="images/bleu.jpg">
-  <h3>Bleu de Chanel</h3>
-  <a href="https://wa.me/255675999999">Order Now</a>
-</div>
-
-<div class="card">
-  <img src="images/aventus.jpg">
-  <h3>Creed Aventus</h3>
-  <a href="https://wa.me/255675999999">Order Now</a>
-</div>
-
-<div class="card">
-  <img src="images/eros.jpg">
-  <h3>Versace Eros</h3>
-  <a href="https://wa.me/255675999999?text=Hello%20I%20want%20Versace%20Eros">Order Now</a>
+<div class="card"><img src="images/clubdenuit.jpg"><h3>Club de Nuit</h3><p class="price">TZS 65,000</p><a href="https://wa.me/255675999999?text=Hello%20I%20want%20Club%20de%20Nuit">Order Now</a></div>
+<div class="card"><img src="images/asad.jpg"><h3>Lattafa Asad</h3><p class="price">TZS 60,000</p><a href="https://wa.me/255675999999?text=Hello%20I%20want%20Lattafa%20Asad">Order Now</a></div>
+<div class="card"><img src="images/9pm.jpg"><h3>Afnan 9PM</h3><p class="price">TZS 60,000</p><a href="https://wa.me/255675999999?text=Hello%20I%20want%20Afnan%209PM">Order Now</a></div>
+<div class="card"><img src="images/oudwood.jpg"><h3>Oud Wood</h3><p class="price">TZS 120,000</p><a href="https://wa.me/255675999999?text=Hello%20I%20want%20Oud%20Wood">Order Now</a></div>
+<div class="card"><img src="images/jpg.jpg"><h3>Jean Paul Gaultier</h3><p class="price">TZS 80,000</p><a href="https://wa.me/255675999999?text=Hello%20I%20want%20Jean%20Paul%20Gaultier">Order Now</a></div>
 
 </div>
+</section>
 
-</div>
 <section>
 <h2>Delivery & Location</h2>
-
-<p style="text-align:center; max-width:700px; margin:auto; opacity:0.9;">
-We are based locally and offer fast, reliable delivery.
+<p style="text-align:center;max-width:700px;margin:auto;">
+We are based in Dar es Salaam and offer fast, reliable delivery.
 Same-day delivery available within the city.
 </p>
-
-<div style="text-align:center; margin-top:30px;">
-<p>📍 Location: <strong>Dar es Salaam</strong></p>
-<p>🚚 Delivery: <strong>Same Day / Next Day</strong></p>
-<p>💳 Payment: <strong>Cash / Mobile Money</strong></p>
+<div style="text-align:center;margin-top:25px;">
+<p>📍 Dar es Salaam</p>
+<p>🚚 Same Day / Next Day Delivery</p>
+<p>💳 Cash & Mobile Money</p>
 </div>
 </section>
 
