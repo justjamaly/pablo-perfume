@@ -1,150 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pablo Perfumes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #0f0f0f;
-      color: #fff;
-    }
-    header {
-      background: linear-gradient(to right, #000, #1a1a1a);
-      text-align: center;
-      padding: 60px 20px;
-    }
-    header h1 {
-      font-size: 3em;
-      color: gold;
-    }
-    header p {
-      font-size: 1.2em;
-      opacity: 0.9;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: gold;
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 30px;
-    }
-    section {
-      padding: 50px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    h2 {
-      color: gold;
-      border-bottom: 1px solid gold;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .card {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-    }
-    .card p {
-      opacity: 0.85;
-    }
-    footer {
-      background: #000;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 40px;
-    }
-    a.social {
-      color: gold;
-      display: block;
-      margin: 8px 0;
-      text-decoration: none;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Pablo Perfumes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-main: #f7f7f7;
+  --bg-card: #ffffff;
+  --text-main: #111;
+  --text-muted: #666;
+  --gold: #c9a24d;
+  --border-light: #e5e5e5;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+header {
+  background: linear-gradient(to right, #000, #222);
+  color: #fff;
+  text-align: center;
+  padding: 110px 20px;
+}
+
+header h1 {
+  font-size: 3.2em;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+header span {
+  color: var(--gold);
+}
+
+header p {
+  font-size: 1.1em;
+  opacity: 0.85;
+}
+
+.btn-main {
+  background: var(--gold);
+  color: #000;
+  padding: 14px 34px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+section {
+  max-width: 1300px;
+  margin: auto;
+  padding: 70px 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
+
+.card h3 {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 12px 0 6px;
+}
+
+.price {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+.card a {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.85em;
+  margin-top: 12px;
+  display: inline-block;
+}
+
+.info {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: auto;
+}
+
+footer {
+  background: #111;
+  color: #bbb;
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 0.85em;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>Pablo Perfumes</h1>
-  <p>Luxury Scents • Locally Sold • Social Media Orders</p>
-  <a class="btn" href="https://wa.me/255675999999">Order via WhatsApp</a>
+  <h1>PABLO <span>PERFUMES</span></h1>
+  <p>Authentic Designer Fragrances • Delivered Across Dar es Salaam</p>
+  <a class="btn-main" href="https://wa.me/255675999999">Order via WhatsApp</a>
 </header>
 
 <section>
-  <h2>Top 20 Best Perfumes</h2>
+  <h2>Our Bestselling Fragrances</h2>
   <div class="grid">
-    <div class="card">Dior Sauvage</div>
-    <div class="card">Bleu de Chanel</div>
-    <div class="card">Creed Aventus</div>
-    <div class="card">YSL Y</div>
-    <div class="card">Versace Eros</div>
-    <div class="card">Armaf Club de Nuit</div>
-    <div class="card">Lattafa Asad</div>
-    <div class="card">Afnan 9PM</div>
-    <div class="card">Tom Ford Oud Wood</div>
-    <div class="card">Jean Paul Gaultier</div>
-    <div class="card">Paco Rabanne 1 Million</div>
-    <div class="card">Maison Francis Kurkdjian</div>
-    <div class="card">Burberry Hero</div>
-    <div class="card">Givenchy Gentleman</div>
-    <div class="card">Bvlgari Man</div>
-    <div class="card">Montblanc Explorer</div>
-    <div class="card">Hugo Boss Bottled</div>
-    <div class="card">Prada Luna Rossa</div>
-    <div class="card">Dolce & Gabbana The One</div>
-    <div class="card">Carolina Herrera Bad Boy</div>
+
+    <div class="card">
+      <img src="images/sauvage.jpg">
+      <h3>Dior Sauvage</h3>
+      <p class="price">TZS 85,000</p>
+      <a href="https://wa.me/255675999999?text=I%20want%20Dior%20Sauvage">Order</a>
+    </div>
+
+    <div class="card">
+      <img src="images/bleu.jpg">
+      <h3>Bleu de Chanel</h3>
+      <p class="price">TZS 90,000</p>
+      <a href="https://wa.me/255675999999?text=I%20want%20Bleu%20de%20Chanel">Order</a>
+    </div>
+
+    <div class="card">
+      <img src="images/aventus.jpg">
+      <h3>Creed Aventus</h3>
+      <p class="price">TZS 150,000</p>
+      <a href="https://wa.me/255675999999?text=I%20want%20Creed%20Aventus">Order</a>
+    </div>
+
+    <div class="card">
+      <img src="images/eros.jpg">
+      <h3>Versace Eros</h3>
+      <p class="price">TZS 75,000</p>
+      <a href="https://wa.me/255675999999?text=I%20want%20Versace%20Eros">Order</a>
+    </div>
+
   </div>
 </section>
 
 <section>
-  <h2>Recognised Perfumes</h2>
+  <h2>Why Choose Pablo Perfumes</h2>
   <div class="grid">
-    <div class="card">Calvin Klein One</div>
-    <div class="card">Davidoff Cool Water</div>
-    <div class="card">Issey Miyake</div>
-    <div class="card">Lacoste Blanc</div>
-    <div class="card">Zara Vibrant Leather</div>
-    <div class="card">Jaguar Classic</div>
-    <div class="card">Nautica Voyage</div>
-    <div class="card">Rasasi Hawas</div>
-    <div class="card">Al Haramain Amber Oud</div>
-    <div class="card">Bentley Intense</div>
-    <div class="card">Guess Seductive</div>
-    <div class="card">CK Euphoria</div>
-    <div class="card">Armani Code</div>
-    <div class="card">Azzaro Wanted</div>
-    <div class="card">Police To Be</div>
-    <div class="card">Joop Homme</div>
-    <div class="card">Diesel Only The Brave</div>
-    <div class="card">Ferrari Black</div>
-    <div class="card">Abercrombie Fierce</div>
-    <div class="card">Perry Ellis 360</div>
+    <div class="card"><h3>✔ Authentic Fragrances</h3><p>100% genuine designer perfumes</p></div>
+    <div class="card"><h3>🚚 Fast Delivery</h3><p>Same-day delivery in Dar es Salaam</p></div>
+    <div class="card"><h3>💬 Easy Ordering</h3><p>Order quickly via WhatsApp</p></div>
   </div>
 </section>
 
 <section>
-  <h2>How to Order</h2>
-  <p>We sell locally. To place an order or ask about availability, contact us via social media.</p>
-  <a class="social" href="https://wa.me/255675999999">📱 WhatsApp: +255 675 999 999</a>
-  <a class="social" href="https://www.instagram.com/perfumes.pablo">📸 Instagram: perfumes.pablo</a>
-  <a class="social" href="#">👻 Snapchat: pablo.perfumes</a>
+  <h2>Delivery & Location</h2>
+  <p class="info">
+    We deliver across Dar es Salaam with safe packaging and reliable service.
+    Same-day delivery available for selected areas.
+  </p>
 </section>
 
 <footer>
-  <p>© 2026 Pablo Perfumes — Luxury You Can Smell</p>
+  © 2026 Pablo Perfumes • Luxury You Can Smell
 </footer>
 
 </body>
