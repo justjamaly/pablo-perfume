@@ -2,88 +2,84 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Pablo Perfumes | Authentic Designer Fragrances</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pablo Perfumes | Luxury Designer Fragrances</title>
 <meta name="description" content="Buy authentic designer perfumes in Dar es Salaam. Same-day delivery. Order via WhatsApp.">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#f6f6f6; --card:#fff; --text:#111; --muted:#666; --gold:#c9a24d; --border:#e5e5e5; --hover-shadow:rgba(0,0,0,0.15);
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);}
-a{text-decoration:none;color:inherit;}
-button{cursor:pointer;font-family:inherit;}
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#f6f6f6; --card:#fff; --text:#111; --muted:#666;
+  --gold:#c9a24d; --border:#e5e5e5;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:Poppins;background:var(--bg);color:var(--text);}
 nav{
   background:#fff;border-bottom:1px solid var(--border);
   padding:15px 25px;display:flex;justify-content:space-between;align-items:center;
   position:sticky;top:0;z-index:100;
 }
 nav strong{letter-spacing:2px;}
-nav a{margin-left:20px;font-size:.9em;transition:.3s;}
-nav a:hover{color:var(--gold);}
-
+nav a{text-decoration:none;color:#000;margin-left:20px;font-size:.9em;}
 header{
   background:linear-gradient(to right,#000,#1c1c1c);
   color:#fff;text-align:center;padding:110px 20px;
 }
 header h1{font-size:3em;letter-spacing:4px;}
 header span{color:var(--gold);}
-header p{opacity:.85;max-width:600px;margin:10px auto 0;}
-.btn{background:var(--gold);color:#000;padding:14px 34px;border-radius:4px;font-weight:600;margin-top:30px;display:inline-block;transition:.3s;}
-.btn:hover{background:#b48b3f;}
-
-main{max-width:1300px;margin:auto;padding:70px 20px;}
+header p{opacity:.85;max-width:600px;margin:auto;}
+.btn{
+  background:var(--gold);color:#000;padding:14px 34px;
+  border-radius:4px;text-decoration:none;font-weight:600;display:inline-block;margin-top:30px;
+}
+section{max-width:1300px;margin:auto;padding:70px 20px;}
 h2{text-align:center;margin-bottom:30px;}
 .controls{text-align:center;margin-bottom:35px;}
-.controls input,.controls select{padding:10px;width:220px;border:1px solid var(--border);margin:6px;border-radius:4px;}
-.controls button{padding:8px 16px;border:1px solid var(--border);background:#fff;margin:4px;border-radius:4px;transition:.3s;}
-.controls button:hover{background:var(--gold);color:#000;}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;position:relative;}
-
+.controls input,.controls select{padding:10px;width:220px;border:1px solid var(--border);margin:6px;}
+.controls button{padding:8px 16px;border:1px solid var(--border);background:#fff;cursor:pointer;margin:4px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;}
 .card{
   background:var(--card);border:1px solid var(--border);border-radius:10px;
-  padding:20px;text-align:center;position:relative;transition:.3s;cursor:pointer;overflow:hidden;
+  padding:20px;text-align:center;transition:.3s;
+  position:relative;
 }
-.card:hover{transform:translateY(-6px);box-shadow:0 12px 30px var(--hover-shadow);}
-.card img{width:100%;height:220px;object-fit:contain;border-radius:6px;transition:transform .3s;}
-.card:hover img{transform:scale(1.05);}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,.12);}
+.card img{width:100%;height:220px;object-fit:contain;transition:opacity .3s;}
 .card h3{font-size:1em;font-weight:500;margin:12px 0 5px;}
 .price{color:var(--gold);font-weight:600;}
-.discount{color:#999;text-decoration:line-through;margin-left:6px;}
-.badge{position:absolute;top:12px;left:12px;background:var(--gold);color:#000;padding:4px 10px;font-size:.75em;border-radius:50px;font-weight:600;text-transform:uppercase;animation:bounce 1s infinite alternate;}
-@keyframes bounce{0%{transform:translateY(0);}100%{transform:translateY(-3px);}}
-.card .discount-badge{top:45px;background:red;color:#fff;}
-
-.no-products{text-align:center;font-size:1.1em;color:var(--muted);margin-top:20px;}
-
-footer{background:#111;color:#bbb;text-align:center;padding:35px 20px;font-size:.85em;}
-
-#cartBtn{position:fixed;bottom:20px;right:20px;background:#000;color:#fff;padding:14px 20px;border-radius:50px;display:flex;align-items:center;gap:6px;transition:.3s;z-index:150;}
-#cartBtn:hover{background:var(--gold);color:#000;}
-#cartCount{background:red;color:#fff;border-radius:50%;width:20px;height:20px;display:flex;justify-content:center;align-items:center;font-size:.75em;font-weight:600;}
-
-/* Modal */
-#modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);justify-content:center;align-items:center;z-index:200;}
-#modalContent{background:#fff;padding:20px;border-radius:10px;max-width:500px;width:90%;position:relative;text-align:center;animation:fadeIn .3s ease;}
-#modalContent img{width:100%;max-height:300px;object-fit:contain;border-radius:6px;margin-bottom:15px;}
-#modalContent h3{margin-bottom:10px;}
-#modalContent p{margin-bottom:15px;color:#555;}
-#modalContent button{width:auto;}
-#modalClose{position:absolute;top:10px;right:15px;font-size:1.5em;cursor:pointer;color:#333;}
-@keyframes fadeIn{from{opacity:0;transform:scale(0.95);}to{opacity:1;transform:scale(1);}}
-
-/* Cart Drawer */
-#cartDrawer{position:fixed;right:-100%;top:0;height:100%;width:320px;background:#fff;box-shadow:-4px 0 30px rgba(0,0,0,.2);z-index:200;transition:right .3s;display:flex;flex-direction:column;}
-#cartDrawer header{padding:20px;font-weight:600;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;}
-#cartDrawer .items{flex:1;overflow-y:auto;padding:10px;}
-#cartDrawer .item{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #eee;}
-#cartDrawer .item button{padding:2px 6px;background:red;color:#fff;border:none;border-radius:4px;font-size:.75em;}
-#cartDrawer footer{padding:15px;border-top:1px solid #eee;display:flex;justify-content:space-between;align-items:center;}
-#cartDrawer footer button{background:var(--gold);border:none;padding:10px 15px;border-radius:4px;color:#000;font-weight:600;cursor:pointer;transition:.3s;}
-#cartDrawer footer button:hover{background:#b48b3f;}
+.card button{
+  background:#000;color:#fff;padding:10px 18px;border-radius:4px;
+  border:none;font-size:.85em;margin:6px;cursor:pointer;
+}
+.badge{
+  position:absolute;top:12px;left:12px;background:var(--gold);
+  color:#000;padding:3px 7px;font-size:.7em;border-radius:4px;font-weight:600;
+}
+footer{
+  background:#111;color:#bbb;text-align:center;padding:35px 20px;font-size:.85em;
+}
+#cartBtn{
+  position:fixed;bottom:20px;right:20px;
+  background:#000;color:#fff;padding:14px 20px;border-radius:50px;
+  cursor:pointer;font-size:.9em;
+}
+#cartDrawer{
+  position:fixed;right:-400px;top:0;width:380px;height:100%;background:#fff;
+  box-shadow:-6px 0 30px rgba(0,0,0,.12);transition:.3s;padding:20px;overflow-y:auto;z-index:200;
+}
+#cartDrawer h3{margin-top:0;}
+#cartDrawer .close{cursor:pointer;float:right;font-size:1.3em;font-weight:700;}
+#cartDrawer .cart-item{margin-bottom:15px;}
+#cartDrawer .cart-item span{display:block;margin:2px 0;}
+#cartDrawer .qty{display:flex;gap:8px;margin-top:5px;}
+#cartDrawer .qty button{padding:3px 7px;background:#000;color:#fff;border:none;border-radius:3px;cursor:pointer;}
+#cartDrawer .total{font-weight:700;margin-top:15px;text-align:right;font-size:1.1em;}
+@media(max-width:600px){
+  header h1{font-size:2.2em;}
+  nav a{margin-left:10px;}
+  #cartDrawer{width:100%;}
+}
 </style>
 </head>
 <body>
@@ -98,157 +94,160 @@ footer{background:#111;color:#bbb;text-align:center;padding:35px 20px;font-size:
 </nav>
 
 <header>
-  <h1>PABLO <span>PERFUMES</span></h1>
-  <p>Authentic Designer Fragrances • Same-Day Delivery in Dar es Salaam</p>
-  <a class="btn" href="#shop">Shop Now</a>
+<h1>PABLO <span>PERFUMES</span></h1>
+<p>Authentic Designer Fragrances • Same-Day Delivery in Dar es Salaam</p>
+<a class="btn" href="#shop">Shop Now</a>
 </header>
 
-<main>
 <section id="shop">
-  <h2>Shop Fragrances</h2>
-  <div class="controls">
-    <input type="text" id="search" placeholder="Search perfume...">
-    <select id="sort">
-      <option value="default">Sort by price</option>
-      <option value="low">Low to High</option>
-      <option value="high">High to Low</option>
-    </select><br>
-    <button data-category="all">All</button>
-    <button data-category="men">Men</button>
-    <button data-category="women">Women</button>
-    <button data-category="unisex">Unisex</button>
-  </div>
-  <div class="grid" id="products"></div>
-  <div id="noProducts" class="no-products" style="display:none;">No products found.</div>
+<h2>Shop Fragrances</h2>
+
+<div class="controls">
+<input type="text" id="search" placeholder="Search perfume...">
+<select id="sort">
+<option value="default">Sort by price</option>
+<option value="low">Low to High</option>
+<option value="high">High to Low</option>
+</select><br>
+<button onclick="setCategory('all')">All</button>
+<button onclick="setCategory('men')">Men</button>
+<button onclick="setCategory('women')">Women</button>
+<button onclick="setCategory('unisex')">Unisex</button>
+</div>
+
+<div class="grid" id="products"></div>
 </section>
 
 <section id="delivery">
-  <h2>Delivery & Payment</h2>
-  <p style="text-align:center;color:#666">
-    Same-day delivery in Dar es Salaam<br>
-    Cash & Mobile Money accepted
-  </p>
+<h2>Delivery & Payment</h2>
+<p style="text-align:center;color:#666">
+Same-day delivery in Dar es Salaam<br>
+Cash & Mobile Money accepted
+</p>
 </section>
 
 <section id="contact">
-  <h2>Contact Us</h2>
-  <p style="text-align:center;color:#666">
-    📱 WhatsApp: +255 675 999 999<br>
-    📸 Instagram: perfumes.pablo
-  </p>
+<h2>Contact Us</h2>
+<p style="text-align:center;color:#666">
+📱 WhatsApp: +255 675 999 999<br>
+📸 Instagram: perfumes.pablo
+</p>
 </section>
-</main>
 
 <footer>
-  © 2026 Pablo Perfumes • Luxury You Can Smell
+© 2026 Pablo Perfumes • Luxury You Can Smell
 </footer>
 
-<div id="cartBtn">🛒 Cart <span id="cartCount">0</span></div>
-
-<!-- Modal -->
-<div id="modal">
-  <div id="modalContent">
-    <span id="modalClose">&times;</span>
-    <img src="" alt="">
-    <h3></h3>
-    <p></p>
-    <button id="modalAdd">Add to Cart</button>
-  </div>
-</div>
-
-<!-- Cart Drawer -->
+<div id="cartBtn">🛒 Checkout</div>
 <div id="cartDrawer">
-  <header>Cart <span id="drawerClose" style="cursor:pointer;">&times;</span></header>
-  <div class="items" id="cartItems"></div>
-  <footer>
-    <span>Total: TZS <span id="cartTotal">0</span></span>
-    <button id="checkoutBtn">Checkout</button>
-  </footer>
+<h3>Cart <span class="close" onclick="closeCart()">×</span></h3>
+<div id="cartItems"></div>
+<div class="total">Total: TZS <span id="cartTotal">0</span></div>
+<button class="btn" onclick="checkout()">Order via WhatsApp</button>
 </div>
 
 <script>
-const products = [
-  { name: "Dior Sauvage", price: 85000, category: "men", image: "images/sauvage.jpg", description:"Fresh and spicy with notes of bergamot and pepper." },
-  { name: "Bleu de Chanel", price: 90000, category: "men", image: "images/bleu.jpg", description:"Woody aromatic fragrance, elegant and refined.", discount: 80000 },
-  { name: "Oud Wood", price: 120000, category: "unisex", image: "images/oudwood.jpg", description:"Exotic oud with rich woody notes." },
-  { name: "Chanel Coco Mademoiselle", price: 95000, category: "women", image: "images/coco.jpg", description:"Classic floral scent with orange and jasmine.", discount: 85000 },
-  { name: "Gucci Bloom", price: 80000, category: "women", image: "images/bloom.jpg", description:"Soft floral with notes of tuberose and jasmine." },
-  { name: "Tom Ford Noir", price: 110000, category: "men", image: "images/tomford.jpg", description:"Dark, sensual fragrance with warm spicy notes." }
+let category='all';
+let cart=[];
+
+const products=[
+  {name:"Dior Sauvage",price:85000,category:"men",image:"images/sauvage.jpg",description:"Fresh and spicy with notes of bergamot and pepper."},
+  {name:"Bleu de Chanel",price:90000,category:"men",image:"images/bleu.jpg",description:"Woody aromatic fragrance, elegant and refined.",discount:80000,new:true},
+  {name:"Oud Wood",price:120000,category:"unisex",image:"images/oudwood.jpg",description:"Exotic oud with rich woody notes."},
+  {name:"Chanel Coco Mademoiselle",price:95000,category:"women",image:"images/coco.jpg",description:"Classic floral scent with orange and jasmine.",discount:85000,new:true},
+  {name:"Gucci Bloom",price:80000,category:"women",image:"images/bloom.jpg",description:"Soft floral with notes of tuberose and jasmine."},
+  {name:"Tom Ford Noir",price:110000,category:"men",image:"images/tomford.jpg",description:"Dark, sensual fragrance with warm spicy notes."}
 ];
 
-let category = 'all', cart = [], selectedProduct = null;
-const productsGrid = document.getElementById('products');
-const searchInput = document.getElementById('search');
-const sortSelect = document.getElementById('sort');
-const categoryButtons = document.querySelectorAll('.controls button[data-category]');
-const modal = document.getElementById('modal');
-const modalImg = modal.querySelector('img');
-const modalTitle = modal.querySelector('h3');
-const modalDesc = modal.querySelector('p');
-const modalAdd = document.getElementById('modalAdd');
-const modalClose = document.getElementById('modalClose');
-const cartBtn = document.getElementById('cartBtn');
-const cartCount = document.getElementById('cartCount');
-const cartDrawer = document.getElementById('cartDrawer');
-const drawerClose = document.getElementById('drawerClose');
-const cartItems = document.getElementById('cartItems');
-const cartTotal = document.getElementById('cartTotal');
-const checkoutBtn = document.getElementById('checkoutBtn');
-const noProducts = document.getElementById('noProducts');
-
 function renderProducts(){
-  productsGrid.innerHTML='';
-  let filtered = products.filter(p => (category==='all'||p.category===category)&&p.name.toLowerCase().includes(searchInput.value.toLowerCase()));
-  if(sortSelect.value==='low') filtered.sort((a,b)=>(a.discount||a.price)-(b.discount||b.price));
-  if(sortSelect.value==='high') filtered.sort((a,b)=>(b.discount||b.price)-(a.discount||a.price));
-  if(!filtered.length){ noProducts.style.display='block'; return; } else { noProducts.style.display='none'; }
-  filtered.forEach(p=>{
-    const card=document.createElement('div'); card.className=`card ${p.category}`; card.dataset.name=p.name; card.dataset.price=p.discount||p.price;
-    card.innerHTML=`<div class="badge">${p.category}</div>
-      ${p.discount?'<div class="badge discount-badge">-'+Math.round((1-p.discount/p.price)*100)+'%</div>':''}
-      <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='images/fallback.jpg'">
+  const grid=document.getElementById('products');
+  grid.innerHTML='';
+  products.forEach((p,index)=>{
+    let card=document.createElement('div');
+    card.className='card '+p.category;
+    card.dataset.name=p.name;
+    card.dataset.price=p.price;
+    card.innerHTML=`${p.new?'<div class="badge">NEW</div>':''}
+      <img src="${p.image}" loading="lazy">
       <h3>${p.name}</h3>
-      <p class="price">TZS ${(p.discount||p.price).toLocaleString()} ${p.discount?'<span class="discount">TZS '+p.price.toLocaleString()+'</span>':''}</p>`;
-    productsGrid.appendChild(card);
-    card.addEventListener('click',()=>{ selectedProduct=p; modalImg.src=p.image; modalTitle.textContent=p.name; modalDesc.textContent=p.description; modal.style.display='flex'; });
+      <p class="price">TZS ${p.price}</p>
+      <button onclick="addToCart(${index})">Add to Cart</button>`;
+    grid.appendChild(card);
+  });
+  filterProducts();
+}
+
+function setCategory(c){category=c;filterProducts();}
+document.getElementById('search').onkeyup=filterProducts;
+document.getElementById('sort').onchange=sortProducts;
+
+function filterProducts(){
+  let q=document.getElementById('search').value.toLowerCase();
+  document.querySelectorAll('.card').forEach(c=>{
+    let match=c.dataset.name.toLowerCase().includes(q);
+    let cat=category==='all'||c.classList.contains(category);
+    c.style.display=(match&&cat)?'block':'none';
   });
 }
 
-searchInput.addEventListener('input',renderProducts);
-sortSelect.addEventListener('change',renderProducts);
-categoryButtons.forEach(btn=>btn.addEventListener('click',()=>{category=btn.dataset.category; renderProducts();}));
+function sortProducts(){
+  let grid=document.getElementById('products');
+  let cards=[...grid.children];
+  let mode=document.getElementById('sort').value;
+  if(mode!=='default'){
+    cards.sort((a,b)=>{
+      return mode==='low'?a.dataset.price-b.dataset.price:b.dataset.price-a.dataset.price;
+    });
+    cards.forEach(c=>grid.appendChild(c));
+  }
+}
 
-modalClose.addEventListener('click',()=>{modal.style.display='none';});
-modalAdd.addEventListener('click',()=>{
-  if(selectedProduct){ cart.push({name:selectedProduct.name,price:selectedProduct.discount||selectedProduct.price}); updateCart(); modal.style.display='none'; }
-});
-window.addEventListener('click', e=>{if(e.target===modal) modal.style.display='none';});
-
-cartBtn.addEventListener('click',()=>{cartDrawer.style.right='0';});
-drawerClose.addEventListener('click',()=>{cartDrawer.style.right='-100%';});
+function addToCart(index){
+  let item={...products[index],qty:1};
+  let exist=cart.find(i=>i.name===item.name);
+  if(exist){exist.qty++;}else{cart.push(item);}
+  updateCart();
+  openCart();
+}
 
 function updateCart(){
-  cartCount.textContent=cart.length;
+  const cartItems=document.getElementById('cartItems');
+  const cartTotal=document.getElementById('cartTotal');
   cartItems.innerHTML='';
   let total=0;
-  cart.forEach((item,index)=>{
-    total+=item.price;
-    const div=document.createElement('div'); div.className='item';
-    div.innerHTML=`<span>${item.name} (TZS ${item.price.toLocaleString()})</span><button data-index="${index}">X</button>`;
+  cart.forEach((i,index)=>{
+    total+=i.price*i.qty;
+    let div=document.createElement('div');
+    div.className='cart-item';
+    div.innerHTML=`<strong>${i.name}</strong>
+      <span>Price: TZS ${i.price}</span>
+      <span>Qty: ${i.qty}</span>
+      <div class="qty">
+        <button data-index="${index}" class="inc">+</button>
+        <button data-index="${index}" class="dec">-</button>
+      </div>`;
     cartItems.appendChild(div);
   });
-  cartTotal.textContent=total.toLocaleString();
-  cartItems.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{ cart.splice(btn.dataset.index,1); updateCart(); }));
+  cartTotal.textContent=total;
+  document.querySelectorAll('.inc').forEach(b=>b.addEventListener('click',()=>{ cart[b.dataset.index].qty++; updateCart(); }));
+  document.querySelectorAll('.dec').forEach(b=>b.addEventListener('click',()=>{ cart[b.dataset.index].qty--; if(cart[b.dataset.index].qty<=0) cart.splice(b.dataset.index,1); updateCart(); }));
 }
 
-checkoutBtn.addEventListener('click',()=>{
-  if(!cart.length){ alert("Cart is empty"); return; }
-  let msg="Hello Pablo Perfumes,%0A%0AI want to order:%0A"; let total=0;
-  cart.forEach(item=>{ msg+=`- ${item.name} (TZS ${item.price})%0A`; total+=item.price; });
-  msg+=`%0ATotal: TZS ${total}`; window.open(`https://wa.me/255675999999?text=${msg}`,"_blank");
-});
+function openCart(){document.getElementById('cartDrawer').style.right='0';}
+function closeCart(){document.getElementById('cartDrawer').style.right='-400px';}
+
+function checkout(){
+  if(!cart.length){alert('Cart is empty');return;}
+  let msg="Hello Pablo Perfumes,%0A%0AI want to order:%0A";
+  let total=0;
+  cart.forEach(i=>{msg+=`- ${i.name} x ${i.qty} (TZS ${i.price})%0A`; total+=i.price*i.qty;});
+  msg+=`%0ATotal: TZS ${total}`;
+  window.open("https://wa.me/255675999999?text="+msg,"_blank");
+}
 
 renderProducts();
+document.getElementById('cartBtn').addEventListener('click',openCart);
 </script>
+
 </body>
 </html>
